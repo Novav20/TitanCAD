@@ -1,0 +1,67 @@
+# ===================================================================
+# Gitignore for C++ Projects using CMake, VS Code, and Visual Studio
+# ===================================================================
+
+# Build output
+# -------------------------------------------------------------------
+# La carpeta de compilación es la más importante a ignorar.
+# Contiene todos los archivos generados, ejecutables y librerías.
+/build/
+/build-*/
+/out/
+
+
+# CMake generated files
+# -------------------------------------------------------------------
+# Archivos temporales que CMake puede crear en el directorio raíz.
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+
+
+# Visual Studio / MSVC specific files
+# -------------------------------------------------------------------
+# Aunque usamos VS Code, CMake genera un proyecto de Visual Studio
+# en el fondo. Ignoramos todos sus archivos temporales y de usuario.
+*.VC.db
+*.sln
+*.sdf
+*.suo
+*.user
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+ipch/
+.vs/
+
+
+# VS Code specific files
+# -------------------------------------------------------------------
+# Ignoramos la configuración local de VS Code para evitar conflictos
+# con las rutas absolutas y preferencias de otros desarrolladores.
+.vscode/
+
+
+# Binaries and Libraries
+# -------------------------------------------------------------------
+# Una capa extra de seguridad para ignorar binarios, aunque
+# ya deberían estar dentro de la carpeta /build/.
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.obj
+*.o
+*.a
+*.so
+
+
+# OS generated files
+# -------------------------------------------------------------------
+# Archivos basura generados por el sistema operativo.
+.DS_Store
+Thumbs.db
